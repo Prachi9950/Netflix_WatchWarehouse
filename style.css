@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #141414;
+  color: white;
+}
+
+h1, h2 {
+  margin: 0;
+}
+.header {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000; 
+}
+
+
+.sign {
+  background-color: #f50713; 
+  color: #f3e8e8;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 4px;
+  font-size:14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.sign:hover {
+  background-color: #e40d17; 
+}
+
+
+.curved-line {
+  position: relative;
+  height: 6px;
+  background: linear-gradient(to right, #fe0511, transparent);
+  clip-path: ellipse(120% 150% at 50% 100%);
+  width: 100%;
+}
+.slp {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide:first-child {
+  display: block;
+}
+
+.logo {
+  width: 80px;
+  object-fit: contain;
+}
+
+.header h1 {
+  color: red;
+  font-size: 24px;
+}
+
+.red-line {
+  flex: 1;
+  height: 2px;
+  background-color: red;
+  margin-left: 10px;
+}
+
+.category {
+  margin: 20px;
+}
+
+.category h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.poster {
+  flex-shrink: 0;
+  width: 180px; 
+  height: 250px; 
+  margin-right: 10px;
+  display: flex;
+  padding: 5px;
+  scrollbar-width: none; 
+}
+
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  display: flex;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.poster img:hover {
+  transform: scale(1.05);
+}
+.category {
+  padding: 20px;
+}
+
+.category h2 {
+  margin-bottom: 10px;
+}
+
+.slider {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.post {
+  position: relative; 
+  flex: 0 0 auto;
+  width: 200px;
+  height: 300px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.post img {
+  width: 100%;
+  height: 100%;
+  object-fit:unset;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.post:hover img {
+  transform: scale(1.09);
+}
+
+.post .hover-text {
+  position: absolute; /* Confines text within the .post container */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  opacity: 0;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.post:hover .hover-text {
+  opacity: 1;
+}
+@media (max-width: 1024px) {
+  .poster {
+    width: 190px; 
+    height: 240px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .category h2 {
+    font-size: 18px;
+  }
+
+  .poster {
+    width: 140px; 
+    height: 210px; 
+  }
+
+  .footer input {
+    width: 200px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .poster {
+    width: 120px; 
+    height: 180px; 
+  }
+
+  .footer input {
+    width: 150px; 
+  }
+
+  .category h2 {
+    font-size: 16px;
+  }
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  z-index: 10;
+  padding: 10px 20px;
+}
+
+.nav__black {
+  background-color: #111;
+}
+
+.footer {
+  background-color: #141414;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-top p {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.email-form input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.email-form button {
+  padding: 10px 20px;
+  background-color: #f50713;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.email-form button:hover {
+  background-color: #e40d17;
+}
+
+.footer-links p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color:gray;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.link-columns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.link-columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-columns li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.footer-bottom button {
+  background-color: gray;
+  color: #f7f6f6;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-bottom button:hover {
+  background-color:gray;
+}
+
+.footer-bottom p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.m {
+  padding: 10px;
+}
