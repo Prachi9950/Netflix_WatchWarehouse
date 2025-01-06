@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin:0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -21,8 +21,8 @@ h1, h2 {
 
 
 .sign {
-  background-color: #f50713; 
-  color: #f3e8e8;
+  background-color: #e40f1a; 
+  color: white;
   padding: 8px 18px;
   border: none;
   border-radius: 4px;
@@ -46,7 +46,7 @@ h1, h2 {
 }
 .slp {
   width: 100%;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
   position: relative;
 }
@@ -71,13 +71,6 @@ h1, h2 {
   font-size: 24px;
 }
 
-.red-line {
-  flex: 1;
-  height: 2px;
-  background-color: red;
-  margin-left: 10px;
-}
-
 .category {
   margin: 20px;
 }
@@ -100,7 +93,7 @@ h1, h2 {
   flex-shrink: 0;
   width: 180px; 
   height: 250px; 
-  margin-right: 10px;
+  margin-right: 8px;
   display: flex;
   padding: 5px;
   scrollbar-width: none; 
@@ -120,11 +113,11 @@ h1, h2 {
   transform: scale(1.05);
 }
 .category {
-  padding: 20px;
+  padding:10px;
 }
 
 .category h2 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .slider {
@@ -155,7 +148,7 @@ h1, h2 {
 }
 
 .post .hover-text {
-  position: absolute; /* Confines text within the .post container */
+  position: absolute; 
   top: 0;
   left: 0;
   right: 0;
@@ -170,7 +163,7 @@ h1, h2 {
   transition: opacity 0.3s ease;
   text-align: center;
   font-size: 16px;
-  padding: 10px;
+  padding: 8px;
 }
 
 .post:hover .hover-text {
@@ -209,13 +202,17 @@ h1, h2 {
 
   .poster {
     width: 120px; 
-    height: 180px; 
+    height: 180px;
+    margin-right: 5px; 
   }
 
   .footer input {
     width: 150px; 
   }
-
+  .category {
+    margin: 5px;
+    padding: 10px;
+  }
   .category h2 {
     font-size: 16px;
   }
